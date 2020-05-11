@@ -274,7 +274,7 @@ options.register('runHadronVariables', False,
     VarParsing.multiplicity.singleton,
     VarParsing.varType.bool,
     'True if you want to run Hadron Variables')
-options.register('runGenVariables', False,
+options.register('runGenVariables', True,
     VarParsing.multiplicity.singleton,
     VarParsing.varType.bool,
     'True if you want to run Gen Variables')
@@ -841,6 +841,11 @@ if options.fastSim :
 
 if options.doBoostedCommissioning:
   options.outFilename += '_BoostedCommissioning'
+
+
+options.outFilename += '_'
+options.outFilename += requiredGroup
+options.outFilename += '_2205'
 
 options.outFilename += '.root'
 
